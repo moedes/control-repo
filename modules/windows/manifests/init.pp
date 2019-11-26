@@ -5,6 +5,6 @@
 # @example
 #   include windows
 class windows {
-  include wingroups
-  include users
+  include windows::wingroups
+  include windows::users
 }
