@@ -5,4 +5,7 @@ class users {
     password => 'password01',
     groups   => 'Services',
   }
+  group {'Services':
+    ensure => present,
+  }
 }
