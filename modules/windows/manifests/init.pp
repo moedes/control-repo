@@ -5,5 +5,5 @@
 # @example
 #   include windows
 class windows {
-  include users
+  include windows::users
 }
