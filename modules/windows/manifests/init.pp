@@ -5,6 +5,12 @@
 # @example
 #   include windows
 class windows {
-  include groups
-  include service_user
+  user { 'service_user':
+    ensure   => 'present',
+    password => 'password01',
+    groups   => 'Services',
+  }
+  group {'Services':
+    ensure => 'present',
+  }
 }
