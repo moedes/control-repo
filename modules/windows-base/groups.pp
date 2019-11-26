@@ -1,0 +1,3 @@
+group {'Services':
+  ensure => 'present',
+}
