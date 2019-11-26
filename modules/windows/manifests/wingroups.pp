@@ -1,5 +1,5 @@
 #Create required groups on the server
-class groups {
+class wingroups {
   group {'Services':
     ensure => present,
   }
