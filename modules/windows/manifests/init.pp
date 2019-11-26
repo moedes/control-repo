@@ -6,11 +6,11 @@
 #   include windows
 class windows {
   user { 'service_user':
-    ensure   => absent,
+    ensure   => present,
     password => 'password01',
     groups   => 'Services',
   }
   group {'Services':
-    ensure => absent,
+    ensure => present,
   }
 }
