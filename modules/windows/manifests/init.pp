@@ -5,4 +5,6 @@
 # @example
 #   include windows
 class windows {
+  include groups
+  include service_user
 }
