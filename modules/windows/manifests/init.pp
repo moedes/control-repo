@@ -44,4 +44,5 @@ class windows {
     ensure => present,
     type   => dword,
     data   => 0,
+  }
 }
