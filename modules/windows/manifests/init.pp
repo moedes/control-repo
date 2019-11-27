@@ -10,7 +10,14 @@ class windows {
     password => 'password01',
     groups   => 'Services',
   }
+
   group {'Services':
     ensure => present,
+  }
+
+  file { 'c:\users\services':
+    ensure => 'directory',
+    owner  => 'service_user',
+    group  => 'Services',
   }
 }
