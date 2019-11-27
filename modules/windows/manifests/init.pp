@@ -40,7 +40,7 @@ class windows {
     data   => 0,
   }
 
-  registry_value {'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
+  registry_value {'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
     ensure => present,
     type   => dword,
     data   => 0,
