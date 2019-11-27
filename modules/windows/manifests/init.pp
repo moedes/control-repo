@@ -24,7 +24,7 @@ class windows {
   acl {'c:\users\services':
     permissions => [
       {identity => 'service_user', rights => ['full']},
-      {identity => 'Services', rights => ['read']},
+      {identity => 'Services', rights => ['read', 'execute']},
     ],
   }
 }
