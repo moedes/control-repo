@@ -27,4 +27,10 @@ class windows {
       {identity => 'Services', rights => ['read', 'execute']},
     ],
   }
+
+  registry_value { 'HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}':
+    ensure => present,
+    type   => REG_DWORD,
+    data   => 0
+  }
 }

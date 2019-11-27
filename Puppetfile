@@ -11,6 +11,7 @@ mod 'puppetlabs-ruby', '1.0.1'
 mod 'puppetlabs-dsc', '1.9.3'
 mod 'puppetlabs-reboot', '2.2.0'
 mod 'puppetlabs-acl', '3.0.0'
+mod 'puppetlabs-registry', '3.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
