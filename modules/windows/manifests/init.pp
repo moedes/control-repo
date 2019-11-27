@@ -37,12 +37,12 @@ class windows {
   registry_value {'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => present,
     type   => dword,
-    data   => 0,
+    data   => 1,
   }
 
   registry_value {'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
     ensure => present,
     type   => dword,
-    data   => 0,
+    data   => 1,
   }
 }
