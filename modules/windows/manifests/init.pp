@@ -50,10 +50,11 @@ class windows {
 
   # Add IIS to Windows Server using puppetlabs/dsc module
   dsc_windowsfeature {'IIS':
-    dsc_ensure => 'absent',
+    dsc_ensure => 'present',
     dsc_name   => 'Web-Server',
   }
 
+  # Reboot when pending dsc reboot
   reboot {'dsc_reboot':
     message => 'DSC has requested a reboot',
     when    => 'pending',
