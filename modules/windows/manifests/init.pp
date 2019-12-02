@@ -126,7 +126,7 @@ class windows {
   include chocolatey
 
   package {'7zip':
-    ensure            => installed,
+    ensure            => absent,
     provider          => 'chocolatey',
     uninstall_options => ['-x']
   }
