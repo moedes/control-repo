@@ -41,10 +41,17 @@ class windows {
     type   => dword,
     data   => 0,
   }
-
+  # Entry to disable or enable the Shutdown Reason Box in Windows
   registry_value {'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
     ensure => present,
     type   => dword,
     data   => 0,
   }
 }
+
+# Add IIS to Windows Server using puppetlabs/dsc module
+dsc_windowsfeature {'IIS':
+  dsc_ensure => 'present',
+  dsc_name   => 'Web-Server',
+}
+
