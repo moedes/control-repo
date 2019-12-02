@@ -13,6 +13,7 @@ mod 'puppetlabs-reboot', '2.2.0'
 mod 'puppetlabs-acl', '3.0.0'
 mod 'puppetlabs-registry', '3.0.0'
 mod 'puppetlabs-iis', '6.0.0'
+mod 'puppet-archive', '4.4.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples

@@ -114,7 +114,7 @@ class windows {
         'protocol'           => 'http',
       },
     ],
-    require => File['c:\\inetpub\\complete'],
+    require          => File['c:\\inetpub\\complete'],
   }
 
   iis_virtual_directory { 'vdir':
@@ -123,6 +123,8 @@ class windows {
     physicalpath => 'c:\\inetpub\\complete_vdir',
     require      => File['c:\\inetpub\\complete_vdir'],
   }
+
+  include 'archive'
 
 }
 
