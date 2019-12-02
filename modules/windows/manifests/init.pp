@@ -128,7 +128,7 @@ class windows {
   package {'7zip':
     ensure            => absent,
     provider          => 'chocolatey',
-    uninstall_options => ['-y']
+    uninstall_options => ['-n']
   }
 
   reboot {'after':
