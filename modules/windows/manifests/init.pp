@@ -125,7 +125,6 @@ class windows {
   }
 
   include chocolatey
-  include 'archive'
 
 }
 
