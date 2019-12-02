@@ -63,7 +63,7 @@ class windows {
 
   iis_site {'Default Web Site':
     ensure  => absent,
-    require => dsc_windowsfeature['IIS'],
+    require => dsc_windowsfeature['Web-Server'],
   }
 
   iis_site { 'basic':
