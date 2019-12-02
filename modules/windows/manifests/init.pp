@@ -126,12 +126,12 @@ class windows {
   include chocolatey
 
   package {'7zip.install':
-    ensure            => installed,
-    provider          => 'chocolatey',
+    ensure   => installed,
+    provider => 'chocolatey',
   }
 
   reboot {'after':
-    subscribe => Package['7zip'],
+    subscribe => Package['7zip.install'],
   }
 }
 
