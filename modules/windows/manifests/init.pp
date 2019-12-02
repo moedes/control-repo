@@ -61,17 +61,12 @@ class windows {
     onlyif  => 'pending_dsc_reboot',
   }
 
-  iis_site {'Default Web Site':
-    ensure  => absent,
-    require => dsc_windowsfeature['Web-Server'],
-  }
-
   iis_site { 'basic':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\basic',
     applicationpool => 'DefaultAppPool',
     require         => [
-      File['minimal'],
+      File['basic'],
       Iis_site['Default Web Site']
     ],
   }
