@@ -5,6 +5,7 @@
 # @example
 #   include windows
 class windows {
+  $defaultwebsitepath = 'C:\inetpub\wwwroot'
   user { 'service_user':
     ensure   => present,
     password => 'password01',
@@ -61,12 +62,20 @@ class windows {
     onlyif  => 'pending_dsc_reboot',
   }
 
+  dsc_xwebsite {'Stop DefaultSite':
+    dsc_ensure       => 'present',
+    dsc_name         => 'Default Web Site',
+    dsc_state        => 'Stopped',
+    dsc_physicalpath => $defaultwebsitepath,
+  }
+
   iis_site { 'basic':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\basic',
     applicationpool => 'DefaultAppPool',
     require         => [
       File['basic'],
+      Dsc_xwebsite['Stop DefaultSite'],
     ],
   }
 
