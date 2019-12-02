@@ -124,6 +124,7 @@ class windows {
     require      => File['c:\\inetpub\\complete_vdir'],
   }
 
+  include chocolatey
   include 'archive'
 
 }
