@@ -128,7 +128,6 @@ class windows {
   package {'7zip.install':
     ensure            => installed,
     provider          => 'chocolatey',
-    uninstall_options => ['-x']
   }
 
   reboot {'after':
