@@ -50,7 +50,7 @@ class windows {
 
   # Add IIS to Windows Server using puppetlabs/dsc module
   dsc_windowsfeature {'IIS':
-    dsc_ensure => 'present',
+    dsc_ensure => 'absent',
     dsc_name   => 'Web-Server',
   }
 
