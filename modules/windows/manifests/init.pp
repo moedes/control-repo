@@ -123,9 +123,10 @@ class windows {
     physicalpath => 'c:\\inetpub\\complete_vdir',
     require      => File['c:\\inetpub\\complete_vdir'],
   }
+  include chocolatey
 
   package { '7zip':
-    ensure   => installed,
+    ensure   => absent,
     provider => 'chocolatey',
   }
 }
