@@ -61,6 +61,26 @@ class windows {
     onlyif  => 'pending_dsc_reboot',
   }
 
+  iis_site {'Default Web Site':
+    ensure  => absent,
+    require => dsc_windowsfeature['IIS'],
+  }
+
+  iis_site { 'basic':
+    ensure          => 'started',
+    physicalpath    => 'c:\\inetpub\\basic',
+    applicationpool => 'DefaultAppPool',
+    require         => [
+      File['minimal'],
+      Iis_site['Default Web Site']
+    ],
+  }
+
+  file { 'basic':
+    ensure => 'directory',
+    path   => 'c:\\inetpub\\basic',
+  }
+
 }
 
 
