@@ -75,13 +75,13 @@ class windows {
 
   acl { 'c:\\inetpub\\complete':
     permissions => [
-      {'identity' => 'IISCompleteGroup', 'rights' => ['read', 'execute']},
+      {'identity' => 'Services', 'rights' => ['read', 'execute']},
     ],
   }
 
   acl { 'c:\\inetpub\\complete_vdir':
     permissions => [
-      {'identity' => 'IISCompleteGroup', 'rights' => ['read', 'execute']},
+      {'identity' => 'service_user', 'rights' => ['read', 'execute']},
     ],
   }
 
