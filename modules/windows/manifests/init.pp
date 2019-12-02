@@ -125,7 +125,7 @@ class windows {
   }
 
   package { '7zip':
-    ensure   => present,
+    ensure   => installed,
     provider => 'chocolatey',
   }
 }
