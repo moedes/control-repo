@@ -124,8 +124,6 @@ class windows {
     require      => File['c:\\inetpub\\complete_vdir'],
   }
 
-  class 
-
   package { '7zip':
     ensure   => 'present',
     provider => 'chocolatey',
