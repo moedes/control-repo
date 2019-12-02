@@ -67,7 +67,6 @@ class windows {
     applicationpool => 'DefaultAppPool',
     require         => [
       File['basic'],
-      Iis_site['Default Web Site']
     ],
   }
 
