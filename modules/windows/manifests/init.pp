@@ -62,12 +62,12 @@ class windows {
     onlyif  => 'pending_dsc_reboot',
   }
 
-  dsc_xwebsite {'Stop DefaultSite':
-    dsc_ensure       => 'present',
-    dsc_name         => 'Default Web Site',
-    dsc_state        => 'Stopped',
-    dsc_physicalpath => $defaultwebsitepath,
-  }
+  # dsc_xwebsite {'Stop DefaultSite':
+  #   dsc_ensure       => 'present',
+  #   dsc_name         => 'Default Web Site',
+  #   dsc_state        => 'Stopped',
+  #   dsc_physicalpath => $defaultwebsitepath,
+  # }
 
   iis_site { 'basic':
     ensure          => 'started',
@@ -75,7 +75,7 @@ class windows {
     applicationpool => 'DefaultAppPool',
     require         => [
       File['basic'],
-      Dsc_xwebsite['Stop DefaultSite'],
+      #Dsc_xwebsite['Stop DefaultSite'],
     ],
   }
 
