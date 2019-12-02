@@ -124,11 +124,11 @@ class windows {
     require      => File['c:\\inetpub\\complete_vdir'],
   }
 
-  include chocolatey
+  class 
 
   package { '7zip':
-    ensure   => 'installed',
-    provider => 'chocolatey'
+    ensure   => 'present',
+    provider => 'chocolatey',
   }
 }
 
