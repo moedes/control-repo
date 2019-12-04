@@ -1,25 +1,7 @@
-# @summary A short summary of the purpose of this class
-#
-# A description of what this class does
-#
-# @example
-class windows {
-  $defaultwebsitepath = 'C:\inetpub\wwwroot'
+#IIS example site
+class profile::iis_complete_site {
 
-  file { 'c:\users\services':
-    ensure => 'directory',
-    owner  => 'service_user',
-    group  => 'Services',
-  }
-
-  acl {'c:\users\services':
-    permissions => [
-      {identity => 'service_user', rights => ['full']},
-      {identity => 'Services', rights => ['read', 'execute']},
-    ],
-  }
-
-  # Add IIS to Windows Server using puppetlabs/dsc module
+    # Add IIS to Windows Server using puppetlabs/dsc module
   dsc_windowsfeature {'IIS':
     dsc_ensure => 'present',
     dsc_name   => 'Web-Server',
@@ -93,16 +75,4 @@ class windows {
     physicalpath => 'c:\\inetpub\\complete_vdir',
     require      => File['c:\\inetpub\\complete_vdir'],
   }
-  include chocolatey
-
-  package {'7zip.install':
-    ensure   => installed,
-    provider => 'chocolatey',
-  }
-
-  reboot {'after':
-    subscribe => Package['7zip.install'],
-  }
 }
-
-
