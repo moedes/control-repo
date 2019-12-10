@@ -13,8 +13,10 @@
 # https://github.com/puppetlabs/docs-archive/blob/master/pe/2015.3/release_notes.markdown#filebucket-resource-no-longer-created-by-default
 File { backup => false }
 
+#This variable is global to the site.pp
 $services_group = 'Services'
 
+#This user would be installed on every node since it is a top level declaration
 user { 'service_user':
   ensure   => present,
   password => 'password01',
