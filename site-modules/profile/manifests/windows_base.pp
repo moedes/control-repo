@@ -23,8 +23,6 @@ class profile::windows_base {
   }
 
   #Ensure service_user is created
-  user { 'service_user':
-  }
 
   #Ensure Services group is createdß
   group { "${services_group}":
