@@ -27,7 +27,7 @@ class profile::iis_complete_site {
 
   acl { 'c:\\inetpub\\complete':
     permissions => [
-      {'identity' => 'Services', 'rights' => ['read', 'execute']},
+      {'identity' => "${services_group}", 'rights' => ['read', 'execute']},
     ],
   }
 
