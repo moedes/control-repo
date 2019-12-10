@@ -29,3 +29,6 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+node 'ec2amaz-cfg9lid.us-west-2.compute.internal' {
+  $services_group = 'Services'
+}

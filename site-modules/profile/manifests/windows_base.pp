@@ -30,7 +30,7 @@ class profile::windows_base {
   }
 
   #Ensure Services group is createdß
-  group {'Services':
+  group { '$services_group':
     ensure => present,
   }
 }
