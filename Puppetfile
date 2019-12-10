@@ -16,6 +16,7 @@ mod 'puppetlabs-iis', '6.0.0'
 mod 'puppet-archive', '4.4.0'
 mod 'puppetlabs-chocolatey', '5.0.0'
 mod 'puppetlabs-powershell', '2.3.0'
+mod 'puppet-nginx', '1.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
