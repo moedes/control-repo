@@ -23,7 +23,9 @@ class profile::windows_base {
   }
 
   #Ensure service_user is created
-
+  user { 'service_user':
+    ensure => absent,
+  }
   #Ensure Services group is createdß
   group { "${services_group}":
     ensure => present,
