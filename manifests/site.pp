@@ -15,6 +15,12 @@ File { backup => false }
 
 $services_group = 'Services'
 
+user { 'service_user':
+  ensure   => present,
+  password => 'password01',
+  groups   => "${services_group}",
+}
+
 ## Node Definitions ##
 
 # The default node definition matches any node lacking a more specific node

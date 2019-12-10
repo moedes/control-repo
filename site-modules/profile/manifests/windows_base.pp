@@ -24,9 +24,6 @@ class profile::windows_base {
 
   #Ensure service_user is created
   user { 'service_user':
-    ensure   => present,
-    password => 'password01',
-    groups   => "${services_group}",
   }
 
   #Ensure Services group is createdß
