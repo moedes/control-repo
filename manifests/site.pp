@@ -24,7 +24,8 @@ user { 'service_user':
 }
 
 $mymessage = lookup(message)
-notice ($mymessage)
+notify { "${mymessage}":
+}
 
 ## Node Definitions ##
 
