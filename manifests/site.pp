@@ -23,6 +23,9 @@ user { 'service_user':
   groups   => "${services_group}",
 }
 
+$mymessage = lookup(message)
+notice "${mymessage}"
+
 ## Node Definitions ##
 
 # The default node definition matches any node lacking a more specific node
