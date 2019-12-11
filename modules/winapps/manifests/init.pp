@@ -10,4 +10,8 @@ class winapps {
   reboot {'after':
     subscribe => Package['7zip.install'],
   }
+
+  $mymessage = lookup(message)
+  notify { "${mymessage}":
+  }
 }
