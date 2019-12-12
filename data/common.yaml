@@ -1,9 +1,9 @@
 ---
 message: "This node is using common data"
 
-#windows::packages:
-#   - 7zip.install
-#   - putty
+winapps::windows::packages:
+   - 7zip.install
+   - putty
   
-windows::provider:
+winapps::windows::provider:
     - chocolatey
