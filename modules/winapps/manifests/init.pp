@@ -7,8 +7,6 @@ class winapps {
   include lookup(winapps::windows::provider)
 
   package { $packages:
-    ensure   => installed,
-    provider => $provider,
   }
 
   #reboot {'after':
