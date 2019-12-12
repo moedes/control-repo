@@ -3,7 +3,7 @@ class winapps {
   include lookup(windows::provider)
 
   package { lookup(windows::packages):
-    ensure   => installed,
+    ensure   => absent,
     provider => lookup(windows::provider),
   }
 
