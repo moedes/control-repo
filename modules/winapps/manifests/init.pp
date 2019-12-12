@@ -11,7 +11,7 @@ class winapps {
     provider => $provider,
   }
 
-  reboot {'after':
-    subscribe => Package['7zip.install'],
-  }
+  #reboot {'after':
+  #  subscribe => Package['7zip.install'],
+  #}
 }
