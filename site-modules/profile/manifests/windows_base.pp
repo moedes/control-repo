@@ -1,5 +1,6 @@
 #Windows base configuration profile
 class profile::windows_base {
+
   include winapps
 
   # Code to enable/disable the IE Enhanced Security Configuration

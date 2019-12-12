@@ -1,5 +1,6 @@
 #Default Windows Apps
 class winapps {
+
   $packages = lookup(windows::packages)
   $provider = lookup(windows::provider)
 
