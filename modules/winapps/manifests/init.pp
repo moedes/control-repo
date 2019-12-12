@@ -1,10 +1,10 @@
 #Default Windows Apps
 class winapps {
-  include chocolatey
+  include lookup(windows::provider)
 
-  package {'7zip.install':
+  package { lookup(windows::packages):
     ensure   => installed,
-    provider => 'chocolatey',
+    provider => lookup(windows::provider),
   }
 
   reboot {'after':
