@@ -1,1 +1,6 @@
 ---
+windows::packages:
+  - firefox
+
+windows::provider:
+  - chocolatey
