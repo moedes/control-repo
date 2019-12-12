@@ -1,10 +1,10 @@
 #Default Windows Apps
 class winapps {
 
-  $packages = lookup(windows::packages)
-  $provider = lookup(windows::provider)
+  $packages = lookup(winapps::windows::packages)
+  $provider = lookup(winapps::windows::provider)
 
-  include lookup(windows::provider)
+  include lookup(winapps::windows::provider)
 
   package { $packages:
     ensure   => installed,
