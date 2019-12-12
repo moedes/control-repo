@@ -22,11 +22,6 @@ user { 'service_user':
   password => 'password01',
   groups   => "${services_group}",
 }
-
-$mymessage = lookup(message)
-notify { "${mymessage}":
-}
-
 ## Node Definitions ##
 
 # The default node definition matches any node lacking a more specific node
