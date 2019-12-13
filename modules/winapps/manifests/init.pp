@@ -1,12 +1,14 @@
 #Default Windows Apps
 class winapps {
 
-  $packages = lookup(winapps::windows::packages)
-  $provider = lookup(winapps::windows::provider)
+  $packages = lookup(winapps::packages)
+  $provider = lookup(winapps::provider)
 
   include lookup(winapps::windows::provider)
 
   package { $packages:
+    ensure   => installed,
+    provider => $provider,
   }
 
   #reboot {'after':

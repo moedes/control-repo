@@ -1,10 +1,6 @@
 ---
-winapps::windows::packages:
+winapps::packages:
   - firefox
-  ensure:
-    - absent
-  provider: 
-    - chocolatey
 
-winapps::windows::provider:
+winapps::provider:
   - chocolatey
