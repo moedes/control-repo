@@ -7,7 +7,7 @@ class winapps {
   include lookup(winapps::provider)
 
   package { $packages:
-    ensure   => installed,
+    ensure   => absent,
     provider => $provider,
   }
 
