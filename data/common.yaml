@@ -3,6 +3,7 @@ message: "This node is using common data"
 
 winapps::packages:
   - 7zip.install
+  - firefox
 
 winapps::provider:
   - chocolatey
