@@ -2,7 +2,7 @@
 class profile::windows_base {
 
   include winapps
-  include os_patching
+  #include os_patching
 
   class {'os_patching':
     patch_window => 'Week1'
