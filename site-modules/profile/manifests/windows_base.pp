@@ -5,7 +5,8 @@ class profile::windows_base {
   #include os_patching
 
   class {'os_patching':
-    patch_window => 'Week1'
+    patch_window => 'Week1',
+    reboot       => 'always'
   }
 
   # Code to enable/disable the IE Enhanced Security Configuration
