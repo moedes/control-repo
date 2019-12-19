@@ -17,6 +17,8 @@ mod 'puppet-archive', '4.4.0'
 mod 'puppetlabs-chocolatey', '5.0.0'
 mod 'puppetlabs-powershell', '2.3.0'
 mod 'albatrossflavour-os_patching', '0.13.0'
+mod 'puppetlabs-wsus_client', '3.0.0'
+mod 'tragiccode-wsusserver', '1.1.2'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
