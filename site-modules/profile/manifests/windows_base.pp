@@ -2,7 +2,7 @@
 class profile::windows_base {
 
   include winapps
-  include os_patching
+  include patch_mgmt
 
   # Code to enable/disable the IE Enhanced Security Configuration
   registry_value { 'HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}\IsInstalled':
