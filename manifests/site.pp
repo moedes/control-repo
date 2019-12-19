@@ -17,10 +17,12 @@ File { backup => false }
 $services_group = 'Services'
 
 #This user would be installed on every node since it is a top level declaration
-user { 'service_user':
-  ensure   => present,
-  password => 'password01',
-  groups   => "${services_group}",
+if $facts['os']['family'] == 'windows' {
+  user { 'service_user':
+    ensure   => present,
+    password => 'password01',
+    groups   => "${services_group}",
+  }
 }
 ## Node Definitions ##
 
