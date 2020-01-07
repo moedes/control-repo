@@ -1,7 +1,7 @@
 ---
-winapps::packages:
-  - firefox
-  - git.install
+# winapps::packages:
+#   - firefox
+#   - git.install
 
-winapps::provider:
-  - chocolatey
+# winapps::provider:
+#   - chocolatey
