@@ -3,6 +3,5 @@ winapps::packages:
   - firefox
   - git.install
 
-#Chocolatey Provider
 winapps::provider:
   - chocolatey
